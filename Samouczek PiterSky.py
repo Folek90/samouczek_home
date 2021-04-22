@@ -733,4 +733,3 @@ for show in tv:
     i += 1
     
 print(tv)
-print()
