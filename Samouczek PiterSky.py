@@ -31,11 +31,11 @@ else:
     print('x jest rozny')
 
 print()
- 
+
 osoba = 'Piotr Kowalski' # lista znakow, TEKST ( list )
 for x in osoba:
     print(x)
- 
+
 wspinaczki = ['skałkowa', 'górska', 'miejska'] # LISTA ( list )
 for x in wspinaczki:
     print(x)
@@ -362,7 +362,7 @@ if guess in (colors + colors2):
     print('Brawo! To wlasnie ten kolor! ;) ')
 else:
     print('Niestety nie, ale sprobuj jescze raz :)')
-''' ''' '
+''' '''
 my_tuple = ()
 print(my_tuple)
 
@@ -561,12 +561,12 @@ print(range(1, 15, 2))
 a = (' kot ' + 'w ' + 'butach') * 4
 print(a)
 
-# CAPITALIZE()  - po prostu zmienia pierwsza litere zdania na Wielka litere.
+# ____________________CAPITALIZE()  - po prostu zmienia pierwsza litere zdania na Wielka litere.
 
 zdanie = 'to jest wynik naszej historii'
 print(zdanie)
 
-# FORMAT:
+# ____________________FORMAT:
 
 s = 'William {}'.format('Faulkner')
 print(s)
@@ -593,7 +593,7 @@ print(''' #{} urodzil sie w {} roku.'''\
 # d = '''Siemanko, oto przyklad dzialania funkcji SPLIT. Ta skladnia zostala podzielona na 2 zdania.'''.split('.')
 # print(d)
 
-# METODA JOIN:
+# ________________________________________METODA JOIN:________________________________________
 '''
 words = ['zwinny', 'lis', 'przeskoczy', 'nad', 'leniwym', 'psem', '.']
 
@@ -642,7 +642,7 @@ zdanie = ''' #Wczoraj napisalem {} i wyslalem do {}.'''\
 #print(zdanie)
 
 # Zadanie 3 /93
-
+'''
 z = ('aldous Huxley urodzil sie w 1894 roku.'.capitalize())
 print(z)
 
@@ -692,8 +692,11 @@ ind = zdanie[:48]
 
 print(ind)
 
-# ====================================  ROZDZIAL 7 PĘTLE  ====================================
+# ====================================  ROZDZIAL 7 ==========================================
 
+
+
+# ________________________________________PĘTLE________________________________________
 name = 'Ted'
 for litery in name:
     print(litery)
@@ -733,3 +736,168 @@ for show in tv:
     i += 1
     
 print(tv)
+
+# LUB DRUGI SPOSOB NA TE SAMA PETLE :
+
+tv = ['jaka to melodia', 'spadkobiercy', 'familiada', 'jeden z 10']
+
+for i, show in enumerate(tv):
+    new = tv[i]
+    new = new.upper()
+    tv[i] = new
+
+print(tv)
+
+print() 
+# __________________________________ŁĄCZENIE NP. DWÓCH PETLI FOR:________________________________________
+
+tv = ['jaka to melodia', 'spadkobiercy','familiada', 'jeden z 10']
+
+coms = ['programowanie', 'znajomi', 'chillout']
+
+all_shows = [] 
+
+for show in tv:
+    show = show.upper()
+    all_shows.append(show)
+
+for show2 in coms:
+    show2 = show2.upper()
+    all_shows.append(show2)
+
+print(all_shows)
+
+# FUNKCJA RANGE: 
+
+for i in range(0,11):
+    print(i)
+
+# PĘTLA WHILE:
+
+x = 9
+while x > 0:
+    print('{}'.format(x))
+    x -= 1
+print('0! \nwoohoo')
+
+#while True:
+print('hello!')
+
+
+# ________________________________________INSTRUKCJA BREAK:________________________________________
+
+for i in range(0,21):
+    print(i)
+pass
+
+for i in range(11,21):
+    print(i)
+    break
+
+for i in range(11,21):
+    print(i)
+    if i == 18:
+        break
+
+print( 3 % 3 )
+qs = ['jak masz na imie: ',
+    'jaki jest Twoj ulubiony kolor: ',
+    'jakie masz zadanie: ',
+    'jak mamy dzis dzien: ']
+
+i = 0
+
+while True:
+    print('*** Wpisz q, aby zakonczyc. ***')
+    a = input(qs[i])
+    if a == 'q':
+        print('************** PRZERWANO **************')
+        break
+    i = (i + 1) % 4
+''' '''
+# ____________________________________INSTRUKCJA CONTINUE_________________________________________
+
+
+for i in range(0,15):
+    if i == 9:
+        continue
+    if i == 11:
+        continue
+    print(i)
+
+# ____________________________________ PETLE ZAGNIEZDZONE _______________________________________
+
+
+for i in range(1, 4):
+    print(i)
+    for letter in ['a', 'b', 'c']:
+        print(letter)
+print('========================================')
+pass
+
+list1 = [1, 2, 3, 4]
+list2 = [5, 6, 7, 8]
+added = [] 
+for i in list1:
+    for j in list2:
+        added.append(i + j)
+
+print(added)
+
+# ZAGNIEZDZANIE PETLI FOR W PETLI WHILE: 
+
+while input('tak lub nie: ') != 'nie':
+    for i in range(1,6):
+            print(i)
+'''
+'''
+# ZADANIE 1 / 104
+# wyswietl wszystkie elementy listy:
+
+
+lista = ['Noc zywych trupow', 'ekipa', 'rodzina soprano', 'pamietniki wampirow']
+
+for l in lista:
+    print(l)
+
+
+# ZADANIE 2:
+# wyswietl wszystkie liczby z zakresu od 25 do 50.
+
+for n in range(25, 51):
+    print(n)
+
+# ZADANIE 3:
+# Wyswietl wszystkie elementy z listy z zadania 1 wraz z ich indeksami.
+
+
+
+lista = ['Noc zywych trupow', 'ekipa', 'rodzina soprano', 'pamietniki wampirow']
+
+for i, show in enumerate(lista):
+    print(i)
+    print(show)
+
+print()
+'''
+
+# ZADANIE 4: 
+# Napisz program zawierajacy petle nieskonczona (z opcja nacisniecia klawisza q w celu jej przerwania),
+# oraz liste liczb. Podczas kazdej iteracji tej petli popros uzytkownika o odganiecie liczby z listy,
+# a nastepnie wyswietlaj informacje, czy udalo mu sie poprawnie trafic , czy nie.
+
+lucky_number = [11]
+
+while True:
+    answer = input('Odgadnij liczbe [0-20], lub wcisnij "q" aby przerwac gre: ')
+    if answer == 'q':
+        break
+
+    try:
+        answer = int(answer)
+    except ValueError:
+        print('\n**zle wpisana wartosc, miala byc liczba!\n**')
+    if answer in lucky_number:
+        print('\n**brawo, udalo Ci sie!\n**')
+    else:
+        print('\n** niestety.. to nie jest ta liczba! sprobuj jeszcze raz :) **\n')
