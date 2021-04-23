@@ -880,7 +880,7 @@ for i, show in enumerate(lista):
 
 print()
 '''
-
+'''
 # ZADANIE 4: 
 # Napisz program zawierajacy petle nieskonczona (z opcja nacisniecia klawisza q w celu jej przerwania),
 # oraz liste liczb. Podczas kazdej iteracji tej petli popros uzytkownika o odganiecie liczby z listy,
@@ -901,3 +901,125 @@ while True:
         print('\n**brawo, udalo Ci sie!\n**')
     else:
         print('\n** niestety.. to nie jest ta liczba! sprobuj jeszcze raz :) **\n')
+'''
+'''
+# ZADANIE 5: 
+# Pomnoz wszystkie liczby z listy [8, 19, 148, 4] przez wszystkie liczby z listy [9, 1, 33, 83], a uzykane wyniki zapisz
+# w trzeciej liscie.
+
+numb1 = [8, 19, 148, 4]
+numb2 = [9, 1, 33, 83]
+
+numbs = [] 
+
+for show1 in numb1:
+    for show2 in numb2:
+        mult = show1 * show2
+        numbs.append(mult)
+        print(mult)
+
+
+# ================================================= ROZDZIAŁ 8 MODUŁY =======================================================
+
+
+print(2**3)
+
+import math
+
+print(math.pow(2, 3))
+
+import random
+
+print(random.randint(0, 100))
+
+import statistics
+
+numbers = [1, 5, 33, 12, 46, 33, 2]
+
+# obliczy srednia: 
+
+print(statistics.mean(numbers))
+
+# Obliczy medianę:
+
+print(statistics.median(numbers))
+
+# Obliczy dominante:
+
+print(statistics.mode(numbers))
+
+# FUNKCJA SPRAWDZAJACA CZY DANE SLOWO JEST 'SLOWEM KLUCZ' DLA PROGRAMU PYTHON: "keyword"
+
+import keyword
+
+print(keyword.iskeyword('for'))
+print(keyword.iskeyword('in'))
+print(keyword.iskeyword('i'))
+print(keyword.iskeyword('while'))
+
+# Zadanie 1 / 108
+# Wywolaj kilka innych funkcji z modulu statistic.
+print('=============================================')
+import statistics
+
+print(statistics.multimode(numbers))
+print(statistics.quantiles(numbers))
+print(statistics.median_high(numbers))
+''' 
+# Zadanie 2 / 108
+# Utworz modul o nazwie 'cubed' definiujacy funkcje pobierajaca jako parametr liczbe i zwracajaca te liczbe podniesiona do potegi trzeciej.
+# Zaimportuj ten modul w innym. 
+
+from tstp import cubed
+
+print(cubed.funkcja(6))
+
+import math
+
+print(math.pow(3,3))
+
+
+# ========================================== ROZDZIAL 12 PARADYGMATY PROGRAMOWANIA ================================================== #
+
+
+class Orange:
+    def __init__(self):
+        self.self
+    print("Utworzono!")
+#
+class Orange:
+    def __init__(self, w, c):
+        self.weight = w
+        self.color = c
+    print("Utworzono!!")
+
+or1 = Orange(280, 'ciemnopomaranczowy')
+print(or1)
+
+#
+class Orange:
+    def __init__(self, w, c):
+        self.weight = w
+        self.color = c
+    print("Utworzono!!")
+
+or1 = Orange(280, 'ciemnopomaranczowy')
+print(or1.weight)
+print(or1.color)
+
+#
+print()
+
+class Orange:
+    def __init__(self, w, c):
+        self.weight = w
+        self.color = c
+    print("Utworzono!!")
+
+or1 = Orange(280, 'ciemnopomaranczowy')
+or1.weight = 650
+or1.color = 'jasnopomaranczowy'
+
+print(or1.weight)
+print(or1.color)
+#
