@@ -1291,15 +1291,13 @@ for i in range(0,201):
 
 
 
-print(50%11)
+print(50%12)
 
 '''
 
 wynik = 0
 
 i = 0
-
-
 
 while i < 3:
     x = int(input('prosze podac liczbe parzysta i dodatnia: '))
