@@ -49,14 +49,15 @@ print()
 tance = { 'klasyczy', 'ludowy', 'wspolczesny'}  # ZBOIRY ( sety )
 for x in tance:
     print(x)
-'''
+
 
 # ======================================== ROZDZIAL 3 ========================================
+'''
 '''
 # 2.
 print()
 
-zmienna = 10
+zmienna = 1
 
 if zmienna >= 10:
     print('zmienna jest wieksza lub rowna 10 !')
@@ -69,7 +70,8 @@ print(100 % 13)
 # 5 
 print(100 // 13) 
 # 6
-
+'''
+'''
 age = int(input('podaj prosze swoj wiek: '))
 
 if age > 60:
@@ -79,14 +81,14 @@ elif age < 60:
 else:
     print('Do setki pozostalo Ci az 40 lat ;) !')
 print()
-'''
+''' 
 # ===================================== ROZDZIAL 4 ===============================================
 print()
 '''
 def funkcja(x):
     return x * 5
 
-z = funkcja(50)
+z = funkcja(251)
 
 if z == 250:
     print('z jest rowne 250 ! ')
@@ -96,14 +98,14 @@ else:
     print('z jest wieksze od 250 !')
 
 print()
-
+'''
 def funkcja_bez_parametru():
     return 2 * 3
 
 result = funkcja_bez_parametru()
 print(result)
 print()
-
+'''
 # Gdy funkcja ma pobierac wiecej niz jeden parametr, wypisujemy je po przecinku.
 
 def Funkcja_kilka_parametrow(x, y, z):
@@ -316,7 +318,19 @@ try:
     print('Wynik dodawania to:', num1 + num2)
 except ValueError:
     print('\n*** Zostala wprowadzona niepoprawna wartosc,\nwpisuj prosze same liczby. ***\n')
-''' '''
+
+# zadanie dodatkowe:
+
+
+name = input('podaj imie: ')
+age = int(input('podaj swoj wiek: '))
+
+def print_age(name, age):
+    print('Czesc, jestes', name, 'i masz',age, 'lat')
+
+print_age(name, age)
+
+
 # ========================== ROZDZIAŁ 5 KONTENERY ( list, krotki, zbiory) ==============================
 print("witaj".upper())
 
@@ -362,7 +376,7 @@ if guess in (colors + colors2):
     print('Brawo! To wlasnie ten kolor! ;) ')
 else:
     print('Niestety nie, ale sprobuj jescze raz :)')
-''' '''
+
 my_tuple = ()
 print(my_tuple)
 
@@ -429,7 +443,7 @@ else:
     print('\n*** cos poszlo nie tak. Sprobuj jeszcze raz! ***\n')
 
 
-''' '''
+
 # KONTENERY W KONTENERACH :
 
 lists = []
@@ -620,8 +634,8 @@ except ValueError:
 print('kot' in 'kot w butach')
 
 print('Odpowiedziala mu: "Owszem".')
-'''
-'''
+
+
 print('kot' in 'kot w butach')
 
 words = ['zwinny','lis','przeskoczy','nad','leniwym','psem']
@@ -638,11 +652,11 @@ ac = input('podaj osobe: ')
 
 zdanie = ''' #Wczoraj napisalem {} i wyslalem do {}.'''\
     #.format(ab, ac)
-
+'''
 #print(zdanie)
 
 # Zadanie 3 /93
-'''
+
 z = ('aldous Huxley urodzil sie w 1894 roku.'.capitalize())
 print(z)
 
@@ -691,11 +705,11 @@ zdanie = 'Dlugo na szturm i szaniec pogladal w milczeniu. Na koniec rzekl: "Stra
 ind = zdanie[:48]
 
 print(ind)
-
+'''
 # ====================================  ROZDZIAL 7 ==========================================
 
 
-
+'''
 # ________________________________________PĘTLE________________________________________
 name = 'Ted'
 for litery in name:
@@ -771,7 +785,7 @@ print(all_shows)
 
 for i in range(0,11):
     print(i)
-
+''' '''
 # PĘTLA WHILE:
 
 x = 9
@@ -780,8 +794,8 @@ while x > 0:
     x -= 1
 print('0! \nwoohoo')
 
-#while True:
-print('hello!')
+while True:
+    print('hello!')
 
 
 # ________________________________________INSTRUKCJA BREAK:________________________________________
@@ -814,7 +828,7 @@ while True:
         print('************** PRZERWANO **************')
         break
     i = (i + 1) % 4
-''' '''
+
 # ____________________________________INSTRUKCJA CONTINUE_________________________________________
 
 
@@ -849,8 +863,8 @@ print(added)
 while input('tak lub nie: ') != 'nie':
     for i in range(1,6):
             print(i)
-'''
-'''
+
+
 # ZADANIE 1 / 104
 # wyswietl wszystkie elementy listy:
 
@@ -879,8 +893,8 @@ for i, show in enumerate(lista):
     print(show)
 
 print()
-'''
-'''
+
+
 # ZADANIE 4: 
 # Napisz program zawierajacy petle nieskonczona (z opcja nacisniecia klawisza q w celu jej przerwania),
 # oraz liste liczb. Podczas kazdej iteracji tej petli popros uzytkownika o odganiecie liczby z listy,
@@ -901,8 +915,7 @@ while True:
         print('\n**brawo, udalo Ci sie!\n**')
     else:
         print('\n** niestety.. to nie jest ta liczba! sprobuj jeszcze raz :) **\n')
-'''
-'''
+
 # ZADANIE 5: 
 # Pomnoz wszystkie liczby z listy [8, 19, 148, 4] przez wszystkie liczby z listy [9, 1, 33, 83], a uzykane wyniki zapisz
 # w trzeciej liscie.
@@ -965,7 +978,7 @@ import statistics
 print(statistics.multimode(numbers))
 print(statistics.quantiles(numbers))
 print(statistics.median_high(numbers))
-''' 
+
 # Zadanie 2 / 108
 # Utworz modul o nazwie 'cubed' definiujacy funkcje pobierajaca jako parametr liczbe i zwracajaca te liczbe podniesiona do potegi trzeciej.
 # Zaimportuj ten modul w innym. 
@@ -977,9 +990,10 @@ print(cubed.funkcja(6))
 import math
 
 print(math.pow(3,3))
-
-
-# ========================================== ROZDZIAL 12 PARADYGMATY PROGRAMOWANIA ================================================== #
+'''
+'''
+# ================================ ROZDZIAL 12 PARADYGMATY PROGRAMOWANIA ================================================== #
+# Cwiczenia:
 
 
 class Orange:
@@ -1023,3 +1037,276 @@ or1.color = 'jasnopomaranczowy'
 print(or1.weight)
 print(or1.color)
 #
+'''
+
+#___________________________________________________________ UDEMY PROGRAMOWANIE OBIEKTOWE:___________________________________________
+
+
+# OBIEKTY - to pojemniki do przechowywania zmiennych i fuknkcji tematycznie ze soba powiazanych 
+#            do dalszego latwiejszego ponownego wykorzystania. 
+
+# Klasy - foremki ( szablony ) do tworzenia egzemplarzy obiektów.
+
+# Atrybut - cecha opisujaca obiekt.
+
+# Metoda - funkcja, która operuje na obiekcie. 
+
+# Self - z ang. 'JA', 'sam osobiscie' , 'siebie' w innych jezykach 'this'. Pobiera wywolywana obiektów do funkcji.
+
+# _____ init _____ - initialization - inicjalizacja - czyli ustawienie startowych wartosci dla atrybutów.
+#                      ( w innych jezykach ___init___ to konstruktor ).
+
+
+
+
+
+
+
+
+
+                                                                            # 1
+                                                           
+'''
+age = 100
+
+class Users:
+    age = 0
+
+
+
+    def print_age(self, message):
+        print(message, 'wiek: ', self.age)
+    
+    def another_method(self, wiadomosc):
+        print(wiadomosc, 'Twoj wiek to ', self.age)
+
+    def another_next(self, message, blablabla):
+        pass
+
+
+seba = Users()
+mirek = Users()
+arek = Users()
+
+mirek.age = 24
+arek.age = 50
+
+mirek.print_age('plec: mezczyzna:')
+arek.print_age('plec: mezczyzna,')
+
+
+def print_age(name, age):
+    print(name, 'wiek: ', age)
+
+name = "Arek"
+print_age(name, age)
+
+'''
+
+
+                                                                         # 2
+'''
+
+age = 150
+
+class Users:
+    age = 0
+    name = ""
+
+
+    def print_age(self, message):
+        print(message, 'wiek:', self.age, 'imie:', self.name)
+    
+
+    def another_next(self, message, blablabla):
+        pass
+
+
+user1 = Users()
+user2 = Users()
+
+
+user1.age = 24
+user1.name = "Arkadiusz"
+user1.print_age('plec: mezczyzna,')
+
+
+user2.age = 50
+user2.name = "Mirek"
+user2.print_age('plec: mezczyzna,')
+
+
+def print_age(name, age):
+    print(name, 'wiek:', age)
+
+name = "Dziadek,"
+print_age(name, age)
+'''
+                                                                       # 3
+'''
+
+age = 150
+
+class Users:         # klasy warto pisac z wielkiej litery.
+    age = 0
+    name = ""
+
+
+    def print_age(self, message):
+        print(message, self.name, 'wiek:', self.age)
+    
+
+    def another_next(self, message, blablabla):
+        pass
+
+
+userList = [Users(), Users()]
+
+userList[0].name = "Remigiusz,"
+userList[0].age = '30'
+userList[0].print_age('To jest')
+
+userList[1].name = 'Franek,'
+userList[1].age = '50'
+userList[1].print_age('A to jest')
+
+
+
+def print_age(name, age):
+    print(name, 'wiek:', age)
+
+name = "Dziadek,"
+print_age(name, age)
+
+'''
+'''
+
+# ___________________________________________________________________ init ____________________________________________________
+age = 150
+
+class Users:
+
+
+    def __init__(self, age, name):
+        print('self - inicjator, ktory wywoluje sie zawsze podczas konstrukcji obiektu.')
+
+
+        self.age = age
+        self.name = name
+
+        self.ageInFuture = age + 1
+
+    def print_informations(self, message):
+        print(message, 'wiek:', self.age, 'imie:', self.name)
+    
+
+    def another_next(self, message, blablabla):
+        pass
+
+
+user1 = Users(24, 'Arek')
+user2 = Users(50, 'Mirek')
+
+
+user1.print_informations('plec: mezczyzna,')
+user2.print_informations('plec: mezczyzna,')
+
+
+def print_informations(name, age):
+    print(name, 'wiek:', age)
+
+name = "Dziadek,"
+print_informations(name, age)
+
+print('Arek w przyszlym roku bedzie mial lat:', user1.ageInFuture)
+
+'''
+
+
+# ____________________________________________ powtorka informacji z petli. _______________________________________
+
+#import json
+'''
+import math
+print(math.sqrt(9))
+from math import *
+
+print(sqrt (64))
+
+
+print(4**12)
+
+'''
+'''
+
+a = int(input('podaj liczbe: '))
+b = int(input('podaj druga liczbe: '))
+
+print(a + b)
+
+''''''
+
+imie = input('Podaj swoje imie: ')
+wiek = input('podaj swoj wiek: ')
+
+age_in_future = (int(wiek) + 1)
+
+print('Hej', imie, 'masz', wiek, 'lat, a w przyszlym roku bedziesz mial ', age_in_future, 'lat')
+'''
+
+
+'''
+suma = 0
+
+i = 0
+
+while i < 4:
+    x = int(input('Podaj dowolna liczbe: '))
+    suma += x
+    i += 1
+
+print('Suma liczb wynosi', suma)
+'''
+'''
+wynik = 0
+
+for i in range(5):
+    x = int(input('podaj liczbe: '))
+    wynik += x
+    if (i % 2 == 1):
+        print('nieparzysta')
+    else:
+        print('liczba parzysta')
+
+print('Wynik dodawania liczb to: ', wynik)
+
+'''
+'''
+for i in range(0,201):
+    if (i % 5 == 0 and i % 7 != 0):
+        print('liczba', i, 'jest podzielna przez 5 oraz niepodzielna przez 7')
+    else:
+        pass
+
+
+
+
+print(50%11)
+
+'''
+
+wynik = 0
+
+i = 0
+
+
+
+while i < 3:
+    x = int(input('prosze podac liczbe parzysta i dodatnia: '))
+    if (x > 0 and x % 2 == 0 and x > 0):
+        wynik += x
+    else:
+        print('miala byc liczba parzysta i dodatnia! sprobuj ponownie.')
+        continue
+    print('aktualny wynik dodawania to:', wynik)
+    i += 1
