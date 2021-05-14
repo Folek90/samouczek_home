@@ -1696,12 +1696,7 @@ mark = bobby
     
 
 print(bobby is not mark)
-print()
-
-
-
-
-
+print() 
 
 
 
