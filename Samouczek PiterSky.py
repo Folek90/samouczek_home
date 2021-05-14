@@ -1627,9 +1627,6 @@ print()
 
 
 
-
-
-
 # Zadanie 1 / 150 /
 
 # Do klasy Square dodaj zmienna klasowa o nazwie square_list, w ktorej beda zapisywane wszystkie obiekty 
@@ -1683,8 +1680,6 @@ print(ob5)
 
 # Napisz funkcje ktora pobiera dwa obiekty, jako parametry i zwraca True, jesli okaze sie, ze sa to te
 # same obiekty, oraz wartosc False w przeciwnym przypadku. 
-
-
 
 class Person:
     def __init__(self):
