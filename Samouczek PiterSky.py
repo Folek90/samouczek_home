@@ -1484,6 +1484,7 @@ print(square.dlugosc)
 print()
 
 
+
 # Zadanie 3 / 144 / 
 
 # Utworz klase Square. Zdefiniuj w niej metode what_am_i , ktora bedzie wyswietlac lancuch znakow "Jestem figura"
