@@ -1596,7 +1596,6 @@ class Lion:
         return self.name
 
 
-
 lion = Lion('Harley')
 
 print(lion)
@@ -1687,7 +1686,6 @@ print(ob5)
 
 
 
-
 class Person:
     def __init__(self):
         self.name = 'Marek'
@@ -1698,6 +1696,8 @@ mark = bobby
     
 
 print(bobby is not mark)
+print()
+
 
 
 
