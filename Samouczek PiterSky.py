@@ -1702,6 +1702,7 @@ print()
 
 
 
+
 class Card:
     suits = ['pik', 'kier', 'karo', 'trefl']
     values = [None, None, '2', '3', '4', '5', '6', '7', '8', '9', '10', 'walet', 'dama', 'król', 'as']
