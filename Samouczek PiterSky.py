@@ -99,12 +99,15 @@ else:
 
 print()
 '''
+'''
 def funkcja_bez_parametru():
     return 2 * 3
 
 result = funkcja_bez_parametru()
 print(result)
 print()
+
+'''
 '''
 # Gdy funkcja ma pobierac wiecej niz jeden parametr, wypisujemy je po przecinku.
 
@@ -1051,14 +1054,10 @@ print(or1.color)
 
 # Metoda - funkcja, która operuje na obiekcie. 
 
-# Self - z ang. 'JA', 'sam osobiscie' , 'siebie' w innych jezykach 'this'. Pobiera wywolywana obiektów do funkcji.
+# Self - z ang. 'JA', 'sam osobiscie' , 'siebie' w innych jezykach 'this'. Pobiera wywolane obiekty do funkcji.
 
 # _____ init _____ - initialization - inicjalizacja - czyli ustawienie startowych wartosci dla atrybutów.
 #                      ( w innych jezykach ___init___ to konstruktor ).
-
-
-
-
 
 
 
@@ -1101,12 +1100,14 @@ def print_age(name, age):
 name = "Arek"
 print_age(name, age)
 
+
+
 '''
 
 
                                                                          # 2
-'''
 
+'''
 age = 150
 
 class Users:
@@ -1142,6 +1143,7 @@ def print_age(name, age):
 name = "Dziadek,"
 print_age(name, age)
 '''
+
                                                                        # 3
 '''
 
@@ -1223,6 +1225,701 @@ print('Arek w przyszlym roku bedzie mial lat:', user1.ageInFuture)
 '''
 
 
+'''
+class Orange:
+    def __init__(self, w, c):
+
+        self.weight = w 
+        self.color = c 
+        self.mold = 0
+        print('Utworzono!')
+
+
+    def rot(self, days, temp):
+        self.mold = days * temp
+
+oragne = Orange(170, 'pomaranczowy')
+print(oragne.mold)
+oragne.rot(10, 29)
+print(oragne.mold)
+
+print()
+
+
+
+class Rectangle:
+    def __init__(self, w, l):
+        self.width = w
+        self.length = l
+
+
+    def area(self):
+        return self.width * self.length
+
+
+    def change_size(self, w, l):
+        self.width = w
+        self.length = l
+
+rectangle = Rectangle(10, 20)
+print(rectangle.area())
+rectangle.change_size(20, 40)
+print(rectangle.area())
+
+'''
+
+
+
+#    ******************************************   ZADANIA ROZDZIAL 12   *****************************************  
+
+
+# Zadanue 1 / 134str /
+
+#  Zdefiniuj klase Apple, dysponujaca czterema zmiennymi instancyjnymi reprezentujacymi cztery rozne cechy jablek.
+
+class Apple:
+    def __init__(self, w, c, s, t):
+        self.weight = w
+        self.color = c
+        self.size = s
+        self.taste = t
+
+
+
+# Zadanie 2 / 134 /
+
+#   Zdefiniuj klasę Circle dysponujaca metoda area, ktora oblicza i zwraca pole kola.
+#   Nastepnie utworz obiekt Circle, wywolaj jego metode area i wyswietl uzyskany wynik.
+#   Skorzystaj przy tym z funkcji pi dostepnej we wbudowanym module math.
+
+
+import math
+
+class Circle:
+    def __init__(self, r):
+        self.radius = r
+    
+    def area(self):
+        return (math.pi * self.radius**2)
+
+circle = Circle(4)
+
+circle.area()
+print('pole kola wynosi', circle.area())
+print()
+
+
+
+# Zadanie 3 / 134 /
+
+# Zdefiniuj klase Triangle dysponujaca metoda area, ktora oblicza i zwraca pole trojkata.
+#   Nastepnie utworz obiekt Triangle, wywolaj jego metode area i wyswietl uzyskany wynik.
+
+
+class Triangle:
+    def __init__(self, a, h):
+        self.a = a
+        self.h = h
+    
+
+    def area(self):
+        return (self.a * self.h) / 2
+
+triangle = Triangle(4, 15)
+
+triangle.area()
+
+print('pole trojkata wynosi', triangle.area())
+print()
+
+
+# Zadanie 4 / 134 /
+
+# Zdefiniuj klase Hexagon dysponujaca metoda o nazwie calculate_perimeter , ktora oblicza i zwraca obwod szesciokata.
+#   Nastepnie utworz obiekt tej klasy, wywolaj jego metode calculate_perimeter i wyswietl zwrocony przez nia wynik.
+
+
+class Hexagon:
+    def __init__(self, a1, a2, a3, a4, a5, a6):
+        self.bok1 = a1
+        self.bok2 = a2
+        self.bok3 = a3
+        self.bok4 = a4
+        self.bok5 = a5
+        self.bok6 = a6
+
+    def calculate_perimeter(self):
+        return self.bok1 + self.bok2 + self.bok3 + self.bok4 + self.bok5 + self.bok6
+
+obiekt = Hexagon(2, 10, 20, 30, 45, 50)
+
+obiekt.calculate_perimeter()
+
+print('pole szczesciokata wynosi', obiekt.calculate_perimeter())
+print()
+
+
+
+
+# ____________________________________________ DZIEDZICZENIE KLAS _______________________________________________________
+
+
+class Shape:
+
+    def __init__(self, w, l):
+        self.width = w 
+        self.len = l
+
+    def print_size(self):
+        print("""{} na {}""".format(self.width, self.len))
+
+my_shape = Shape(20, 20)
+my_shape.print_size()
+
+print()
+
+
+    
+class Shape:
+    def __init__(self, w, l):
+        self.width = w 
+        self.len = l
+
+    def print_size(self):
+        print("""{} na {}""".format(self.width, self.len))
+
+class Square(Shape):
+    pass
+
+a_square = Square(20, 30)
+a_square.print_size()
+
+print()
+
+
+class Square(Shape):
+    def area(self):
+        return self.width * self.len
+
+a_square = Square(30, 30)
+print(a_square.area())
+
+print()
+
+
+
+
+class Dog:
+    def __init__(self, name, breed, owner):
+        self.name = name
+        self.breed = breed
+        self.owner = owner 
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+mick = Person('Mick Jagger')
+stan = Dog('Stanley', 'Bulldog', mick)
+
+print(stan.owner.name)
+
+print()
+
+
+# Zadanie 1 / 144 /
+
+
+class Rectangle:
+    def __init__(self, side1, side2):
+        self.side1 = side1
+        self.side2 = side2
+
+    def calculate_perimeter(self):
+        return 2 * self.side1 + 2 * self.side2
+
+rectangle = Rectangle(2, 3)
+rectangle.calculate_perimeter()
+
+print('obwod prostokata wynosi', rectangle.calculate_perimeter())
+print()
+
+class Square(Rectangle):
+    pass
+
+    def calculate_perimeter(self):
+        return 4 * self.side1
+
+square = Square(4, None)
+square.calculate_perimeter()
+
+
+print('obwod kwadratu wynosi', square.calculate_perimeter())
+print()
+
+
+
+# Zadanie 2 / 144 / 
+#  W klasie Square zdefiniuj metode change_size ktora pozwoli wiekszac lub zmniejszac dlugosci krawedzi 
+#  kwadratu o podana wartosc. 
+
+
+class Square():
+    def __init__(self, d):
+        self.dlugosc = d
+
+    def calculate_perimeter(self):
+        return 4 * self.dlugosc
+
+
+    def change_size(self, newSize):
+        self.dlugosc += newSize
+
+
+square = Square(50)
+print(square.dlugosc)
+
+square.change_size(100)
+print(square.dlugosc)
+
+print()
+
+
+
+# Zadanie 3 / 144 / 
+
+# Utworz klase Square. Zdefiniuj w niej metode what_am_i , ktora bedzie wyswietlac lancuch znakow "Jestem figura"
+#       Zmodyfikuj klasy Square i Rectangle z poprzednich wyzwan, tak by dziedziczyly po klasie Shape.
+#           Utworz obiekty Square i Rectangle , a nastepnie wywowalj ich metode what_am_i. 
+
+
+class Shape:
+    
+    def what_am_i(self):
+
+        print('jestem figura')
+
+class Rectangle(Shape):
+    def __init__(self, side1, side2):
+        self.side1 = side1
+        self.side2 = side2
+
+    def calculate_perimeter(self):
+        return 2 * self.side1 + 2 * self.side2
+print()
+
+
+class Square(Shape):
+    def __init__(self, d):
+        self.dlugosc = d
+
+    def calculate_perimeter(self):
+        return 4 * self.dlugosc
+
+
+
+square = Square(20)
+rectangle = Rectangle(20, 50)
+
+square.what_am_i()
+rectangle.what_am_i()
+
+
+# Zadanie 4 / 144 /
+
+# Zdefiniuj klase Horse oraz Rider. Uzywajac kompozycji , zamelduj fakt, ze kon moze miec jezdzca.
+
+
+class Horse:
+    def __init__(self, name):
+        self.name = name
+
+    
+class Rider:
+    def __init__(self, name, horse):
+        self.name = name
+        self.horse = horse
+
+
+harryHorse = Horse('Harry')
+stanleyMan = Rider('Stanley', harryHorse)
+
+print(stanleyMan.name)
+
+
+# Przyklad z ksiazki.
+
+class Rectangle:
+    recs = [] 
+
+    def __init__(self, w, l):
+        self.width = w
+        self.len = l
+        self.recs.append((self.width, self.len))
+
+    def print_size(self):
+        print("""{} na {} """.format(self.width, self.len))
+
+
+r1 = Rectangle(10, 24)
+r2 = Rectangle(20, 40)
+r3 = Rectangle(100, 200)
+r4 = Rectangle(102, 233)
+
+myRectangle = Rectangle(44, 55)
+myRectangle.print_size()
+
+print(Rectangle.recs)
+print()
+
+
+# _______________________________ METODY MAGICZNE __ REPR __   ____________________________________________
+
+
+
+class Lion:
+    def __init__(self, name):
+        self.name = name
+
+lion = Lion('Harley')
+
+print(lion)
+
+#
+
+print(Rectangle.recs)
+print()
+
+class Lion:
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return self.name
+
+
+lion = Lion('Harley')
+
+print(lion)
+
+x = None
+
+
+if x is None:
+    print('x jest None')
+else:
+    print('x nei jest None')
+
+print() 
+
+class AlwaysPositive:
+    def __init__(self, number):
+        self.number = number
+
+    def __add__(self, other):
+        return abs(self.number + other.number)
+
+
+x = AlwaysPositive(-20)
+y = AlwaysPositive(10)
+
+print(x + y)
+print()
+
+
+
+
+# Zadanie 1 / 150 /
+
+# Do klasy Square dodaj zmienna klasowa o nazwie square_list, w ktorej beda zapisywane wszystkie obiekty 
+# klasy Square.
+
+
+class Square:
+    squareList = []
+
+    def __init__(self, n):
+        self.name = n
+        self.squareList.append(self.name)
+
+ob1 = Square('Djonizy')
+ob2 = Square('Mariano')
+ob3 = Square('Lefiesto')
+
+
+print(Square.squareList)
+
+
+# Zadanie 2 / 150 /
+
+# Zmien klase Square w taki sposob, by podczas wyswietlania obiektu Square byl prezentowany komunikat
+# o dlugosci wszystkich bokow danego kwadratu. Przykladowo w razie utworzenia obiektu Square(22) Pyhton
+# powinienn wyswietlic komunikat " 22 na 22 na 22 na 22." 
+
+
+class Square:
+    squareList = []
+
+    def __init__(self, n):
+        self.name = n
+        self.squareList.append(self.name)
+
+    def __repr__(self):
+        return '{} na {} na {} na {}'.format(self.name, self.name, self.name, self.name)
+
+
+ob1 = Square('Djonizy')
+ob2 = Square('Mariano')
+ob3 = Square('Lefiesto')
+
+ob5 = Square(22)
+
+print(Square.squareList) 
+print(ob5) 
+
+
+# Zadanie 3 / 150 / 
+
+# Napisz funkcje ktora pobiera dwa obiekty, jako parametry i zwraca True, jesli okaze sie, ze sa to te
+# same obiekty, oraz wartosc False w przeciwnym przypadku. 
+
+class Person:
+    def __init__(self):
+        self.name = 'Marek'
+
+
+bobby = Person()
+mark = bobby
+    
+
+print(bobby is not mark)
+print() 
+
+
+
+# ______________________________ ŁĄCZENIE WSZYSTKIEGO W CAŁOSC [ GRA W KARTY ] __________________________________
+
+
+
+class Card:
+    suits = ['pik', 'kier', 'karo', 'trefl']
+    values = [None, None, '2', '3', '4', '5', '6', '7', '8', '9', '10', 'walet', 'dama', 'król', 'as']
+
+
+    def __init__(self, value, suit):
+        self.value = value
+        self.suit = suit
+
+
+    def __lt__(self, other):
+        if self.value < other.value:
+            return True
+        if self.value == other.value:
+            if self.suit < other.suit:
+                return True
+            else:
+                return False
+        return False
+
+
+    def __gt__(self, other):
+        if self.value > other.value:
+            return True
+        if self.value == other.value:
+            if self.suit > other.suit:
+                return True
+            else:
+                return False
+        return False
+
+
+    def __repr__(self):
+        return self.values[self.value] + " " + self.suits[self.suit]
+
+card1 = Card(10, 2)
+card2 = Card(11, 3)
+card3 = Card(4, 1)
+print(card1 < card2)
+
+
+print(card1)
+print(card2)
+print(card3)
+print()
+
+
+# ___________________________________ TWORZENIE KLASY REPREZENTUJACEJ  TALIE KART ____________________________________
+
+
+from random import shuffle
+
+
+class Deck:
+    def __init__(self):
+        self.cards = [] 
+        for i in range(2, 15):
+            for j in range(4):
+                self.cards.append(Card(i, j))
+        shuffle(self.cards)
+
+    def rm_card(self):
+        if len(self.cards) == 0:
+            return
+        return self.cards.pop()
+
+
+deck = Deck()
+for card in deck.cards:
+    print(card)
+
+
+class Player:
+    def __init__(self, name):
+        self.wins = 0
+        self.card = None
+        self.name = name
+
+
+class Game:
+    def __init__(self):
+        name1 = input('Imie gracza 1:')
+        name2 = input('Imie gracza 2:')
+        self.deck = Deck()
+        self.p1 = Player(name1)
+        self.p2 = Player(name2)
+
+
+    def wins(self, winner):
+        w = 'Te runde wygrywa {}'
+        w = w.format(winner)
+        print(w)
+
+    
+    def draw(self, p1n, p1c, p2n, p2c):
+        d = '{} wyciagnal {}, {} wyciagnal {}'
+        d = d.format(p1n, p1c, p2n, p2c)
+        print(d)
+
+    
+    def play_game(self):
+        cards = self.deck.cards
+        print('Zaczynamy rozgrywke!')
+        while len(cards) >= 2:
+            m = 'Nacisnij q, aby zakonczyc ' + \
+                'lub inny klawisz, aby kontynuowac gre:'
+            response = input(m)
+            if response == 'q':
+                break
+            p1c = self.deck.rm_card()
+            p2c = self.deck.rm_card()
+            p1n = self.p1.name
+            p2n = self.p2.name
+            self.draw(p1n, p1c, p2n, p2c)
+            if p1c > p2c:
+                self.p1.wins += 1
+                self.wins(self.p1.name)
+            else:
+                self.p2.wins += 1
+                self.wins(self.p2.name)
+
+        win = self.winner(self.p1, self.p2)
+        print("Wojna zakonczona - wygrał {}".format(win))
+    
+
+
+    def winner(self, p1, p2):
+        if p1.wins > p2.wins:
+            return p1.name
+        if p1.wins < p2.wins:
+            return p2.name
+        return 'Jest remis !!'
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ____________________________________________ powtorka informacji z petli. _______________________________________
 
 #import json
@@ -1291,13 +1988,14 @@ for i in range(0,201):
 
 
 
-print(50%12)
+print(50%11)
 
 '''
-
+'''
 wynik = 0
 
 i = 0
+
 
 while i < 3:
     x = int(input('prosze podac liczbe parzysta i dodatnia: '))
@@ -1308,3 +2006,95 @@ while i < 3:
         continue
     print('aktualny wynik dodawania to:', wynik)
     i += 1
+
+'''
+
+# _______________________________________________________ J S O N _______________________________________________________
+
+import json
+
+#                       json.dumpS(data) - zapisuje dane w postaci String
+#                       json.dump(data, nameOfFile, ensure_ascii=False) - zapisuje dane DO PLIKU w postaci json.
+
+#       dump z ang.- zrzucac/zwalic/zsypać
+
+
+# JSON.DUMPS :
+'''
+film = {
+    'tittle' : "Ale ja nie będę tego robił",
+    'release_year' : '1969',
+    'won_oscar' : True, 
+    'actors' : ('Arkadiusz Wlodarczyk', 'Wiolleta Wlodarczyk'),
+    'budget' : None,
+    'credits' : {
+        'director' : 'Arkadiusz Wlodarczyk',
+        'writer' : 'Alan Burger',
+        'animator' : 'Anime Animatrix'
+        }
+}
+
+encodedFilm = json.dumps(film, ensure_ascii=False, indent=4, sort_keys=True)
+print(encodedFilm)
+
+print()
+
+
+# JSON DUMP :
+
+with open('example.json', 'w', encoding="UTF-8") as file:
+    json.dump(film, file, ensure_ascii=False)
+
+print()
+#                                                    JSON LOADS / LOAD 
+
+# json loads
+
+encodeRetrieveMovie = '{"tittle": "Ale ja nie będę tego robił", "release_year": "1969", "won_oscar": true, "actors": ["Arkadiusz Wlodarczyk", "Wiolleta Wlodarczyk"], "budget": null, "credits": {"director": "Arkadiusz Wlodarczyk", "writer": "Alan Burger", "animator": "Anime Animatrix"}}'
+
+
+decodedMovie = json.loads(encodeRetrieveMovie, encoding="UTF-8")
+
+print(decodedMovie)
+
+print()
+
+
+# json load
+
+with open('example.json', encoding='UTF-8',) as file:
+    wynik = json.load(file)
+
+import pprint
+pprint.pprint(wynik)
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
